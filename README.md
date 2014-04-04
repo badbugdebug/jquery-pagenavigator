@@ -3,9 +3,9 @@ jQuery PageNavigator
 
 ## 소개
 
-* 필수 라이브러리 : jQuery 1.3.2 이상
+* jQuery 1.3.2 이상 필수
 * 블로그 : http://syaku.tistory.com/249
-* 데모는 릴리즈에 포함되어 있습니다.
+* 데모 : http://syakuis.github.io/demo/jquery-pagenavigator/demo.html
 
 jQuery 플러그인 페이지 네비게이션은 게시물의 총수를 이용하여 목록 수 만큼 페이지를 구현하는 자바스크립트 라이브러리입니다.
 사용자(개발자)의 HTML 디자인 그대로를 유지하며 그 위에 자바스크립트를 이용하여 페이지 링크를 적용하는 방식입니다.
