@@ -7,7 +7,7 @@ jQuery PageNavigator
 * 블로그 : http://syaku.tistory.com/249
 * 데모 : http://syakuis.github.io/demo/jquery-pagenavigator/demo.html
 
-jQuery 플러그인 페이지 네비게이션은 게시물의 총수를 이용하여 목록 수 만큼 페이지를 구현하는 자바스크립트 라이브러리입니다.
+jQuery 페이지 네비게이션은 게시물의 총수를 이용하여 목록 수 만큼 페이지를 구현하는 자바스크립트 라이브러리입니다.
 사용자(개발자)의 HTML 디자인 그대로를 유지하며 그 위에 자바스크립트를 이용하여 페이지 링크를 적용하는 방식입니다.
 
 ### 초기 설정
@@ -51,6 +51,8 @@ jQuery 플러그인 페이지 네비게이션은 게시물의 총수를 이용�
 
 ### NHN Nuli 디자인을 사용 예제
 
+* 링크가 없을때도 원하는 디자인을 표현할 수 있습니다.
+
 ```html
 <div class="paginate_complex" id="document_navi2">
   <a class="direction sprev start" href="#"><span></span><span></span>&nbsp;처음</a>
@@ -79,6 +81,8 @@ jQuery 플러그인 페이지 네비게이션은 게시물의 총수를 이용�
 </div>
 ```
 
+tag 는 댓글 페이지를 구현할때 유용하게 사용할 수 있습니다.
+
 ```javascript
   jQuery('#document_navi2').jaPageNavigator({
       page_row : "10" // 보여질 게시물 목록 수
@@ -91,7 +95,7 @@ jQuery 플러그인 페이지 네비게이션은 게시물의 총수를 이용�
 
 ### 옵션 설명
 
-* 필수 옵션 : page_row, page_link, total_count
+* 필수 옵션 : total_count
 
 
 ```javascript
