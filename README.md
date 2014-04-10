@@ -3,50 +3,21 @@ jQuery PageNavigator
 
 ## 소개
 
-* 필수 라이브러리 : jQuery 1.3.2 이상
-* 블로그 : http://syaku.tistory.com
+* jQuery 1.3.2 이상 필수
+* 블로그 : http://syaku.tistory.com/249
+* 데모 : http://syakuis.github.io/demo/jquery-pagenavigator/demo.html
 
-jQuery 플러그인 페이지 네비게이션은 게시물의 총수를 이용하여 목록 수 만큼 페이지를 구현하는 자바스크립트 라이브러리입니다.
+jQuery 페이지 네비게이션은 게시물의 총수를 이용하여 목록 수 만큼 페이지를 구현하는 자바스크립트 라이브러리입니다.
 사용자(개발자)의 HTML 디자인 그대로를 유지하며 그 위에 자바스크립트를 이용하여 페이지 링크를 적용하는 방식입니다.
+
+예제로 NHN Nuli 와 Bootstrap UI 컴포너트를 이용하여 구현하였습니다.
+
 
 ### 초기 설정
 
 ```html
 <script type="text/javascript" language="javascript" charset="UTF-8" src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
 <script type="text/javascript" language="javascript" charset="UTF-8" src="./jquery.pagenavigator.js"></script>
-```
-
-### 옵션 설명
-
-* 필수 옵션 : page_row, page_link, total_count
-
-
-```javascript
-      group : $('#page_group') // 페이지태그 영역
-    , start : '.start' // 처음페이지 태그
-    , startx : '.startx' // 처음페이지 없을경우 숨김 태그
-    , prev : '.prev' // 이전페이지 태그
-    , prevx : '.prevx' // 이전페이지 없을경우 숨김 태그
-    , pageaction : '.pageaction' // 페이지 번호 노출 영역
-    , now : '.now' // 현재페이지번호 태그
-    , num : '.num' // 페이지번호 태그
-    , div : '.div' // 페이지번호 분리 태그
-    , next : '.next' // 다음페이지 태그
-    , nextx : '.nextx' // 다음페이지 없을경우 숨김 태그
-    , end : '.end' // 마지막페이지 태그
-    , endx : '.endx' // 마지막페이지 없을경우 숨김 태그
-    , prevpage : '.prevpage' // 이전 1 페이지 태그
-    , prevpagex : '.prevpagex' // 이전 1 페이지 없을경우 숨김 태그
-    , nextpage : '.nextpage' // 다음 1 페이지 태그
-    , nextpagex : '.nextpagex' // 다음 1 페이지 없을경우 숨김 태그
-    , url : null // 기본적인 파라메터
-    , page : null // 현재페이지번호
-    , total_count : '0' // 총 레코드수
-    , page_link : 10 // 페이지링크번호 노출 수
-    , page_row : 10 // 레코드 노출 수
-    , name : 'page' // 페이지 파라메터 명
-    , autosort : false // 페이지번호 자동정렬 (선택된 번호가 중간에 위치) (버그있음)
-    , tag : null // 인위적으로 노출할 위치
 ```
 
 ### 기본 사용 예제
@@ -83,6 +54,8 @@ jQuery 플러그인 페이지 네비게이션은 게시물의 총수를 이용�
 
 ### NHN Nuli 디자인을 사용 예제
 
+* 링크가 없을때도 원하는 디자인을 표현할 수 있습니다.
+
 ```html
 <div class="paginate_complex" id="document_navi2">
   <a class="direction sprev start" href="#"><span></span><span></span>&nbsp;처음</a>
@@ -111,6 +84,8 @@ jQuery 플러그인 페이지 네비게이션은 게시물의 총수를 이용�
 </div>
 ```
 
+tag 는 댓글 페이지를 구현할때 유용하게 사용할 수 있습니다.
+
 ```javascript
   jQuery('#document_navi2').jaPageNavigator({
       page_row : "10" // 보여질 게시물 목록 수
@@ -120,6 +95,39 @@ jQuery 플러그인 페이지 네비게이션은 게시물의 총수를 이용�
   });
 ```
 
+
+### 옵션 설명
+
+* 필수 옵션 : total_count
+
+
+```javascript
+      group : $('#page_group') // 페이지태그 영역
+    , start : '.start' // 처음페이지 태그
+    , startx : '.startx' // 처음페이지 없을경우 숨김 태그
+    , prev : '.prev' // 이전페이지 태그
+    , prevx : '.prevx' // 이전페이지 없을경우 숨김 태그
+    , pageaction : '.pageaction' // 페이지 번호 노출 영역
+    , now : '.now' // 현재페이지번호 태그
+    , num : '.num' // 페이지번호 태그
+    , div : '.div' // 페이지번호 분리 태그
+    , next : '.next' // 다음페이지 태그
+    , nextx : '.nextx' // 다음페이지 없을경우 숨김 태그
+    , end : '.end' // 마지막페이지 태그
+    , endx : '.endx' // 마지막페이지 없을경우 숨김 태그
+    , prevpage : '.prevpage' // 이전 1 페이지 태그
+    , prevpagex : '.prevpagex' // 이전 1 페이지 없을경우 숨김 태그
+    , nextpage : '.nextpage' // 다음 1 페이지 태그
+    , nextpagex : '.nextpagex' // 다음 1 페이지 없을경우 숨김 태그
+    , url : null // 기본적인 파라메터
+    , page : null // 현재페이지번호
+    , total_count : '0' // 총 레코드수
+    , page_link : 10 // 페이지링크번호 노출 수
+    , page_row : 10 // 레코드 노출 수
+    , name : 'page' // 페이지 파라메터 명
+    , autosort : false // 페이지번호 자동정렬 (선택된 번호가 중간에 위치) (버그있음)
+    , tag : null // 인위적으로 노출할 위치
+```
 
 
 
