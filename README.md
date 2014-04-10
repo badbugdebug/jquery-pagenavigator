@@ -12,6 +12,8 @@ jQuery 페이지 네비게이션은 게시물의 총수를 이용하여 목록 �
 
 예제로 NHN Nuli 와 Bootstrap UI 컴포너트를 이용하여 구현하였습니다.
 
+## 데모 스크린샷
+![](http://syakuis.github.io/demo/jquery-pagenavigator/demo.png)
 
 ### 초기 설정
 
